@@ -22,7 +22,11 @@ object DataManager {
     val jokes: List<Joke>
         get() = jokesList.toList()
 
-    fun getJokes(){
+    fun makeRequest(){
+        this.getJokes()
+    }
+
+    private fun getJokes(){
         val request = Request.Builder().url(url).build()
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {

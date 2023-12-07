@@ -20,7 +20,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="@dimen/_4sdp"
+                android:fontFamily="@font/alleygarden"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
                 android:text="category"
                 android:textSize="@dimen/_16ssp"
                 android:textStyle="bold" />
@@ -30,6 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:fontFamily="@font/alleygarden2"
                 android:padding="@dimen/_4sdp"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:text="setup"
@@ -42,6 +47,7 @@
                 android:gravity="center"
                 android:padding="@dimen/_4sdp"
                 android:text="delivery"
+                android:fontFamily="@font/alleygarden2"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:textSize="@dimen/_14ssp" />
             <androidx.appcompat.widget.AppCompatButton

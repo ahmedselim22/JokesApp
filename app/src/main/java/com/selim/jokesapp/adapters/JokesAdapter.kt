@@ -7,20 +7,24 @@ import android.view.OnReceiveContentListener
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.selim.jokesapp.R
 import com.selim.jokesapp.databinding.JokeItemLayoutBinding
 import com.selim.jokesapp.model.domain.Joke
 import com.selim.jokesapp.ui.OnItemClicked
+import com.selim.jokesapp.utils.MainDiffUtil
 
 class JokesAdapter(private var list: List<Joke>,private val listener: OnItemClicked):RecyclerView.Adapter<JokesAdapter.JokesViewHolder>() {
 
     class JokesViewHolder(itemView: View) : ViewHolder(itemView) {
         val binding = JokeItemLayoutBinding.bind(itemView)
     }
-    fun setData(list: List<Joke>){
-        this.list =list
+    fun setData(newList: List<Joke>){
+        val d =DiffUtil.calculateDiff(MainDiffUtil(list,newList))
+        list =newList
+        d.dispatchUpdatesTo(this)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JokesViewHolder {
