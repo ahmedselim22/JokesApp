@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_16sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/jokeItem_cardView"
+    app:cardCornerRadius="@dimen/_20sdp"
+    android:layout_margin="@dimen/_8sdp"
+    android:elevation="@dimen/_20sdp"
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jokeItem_tv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="category"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/jokeItem_tv_part1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:text="setup"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:id="@+id/jokeItem_tv_part2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="delivery"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:textSize="@dimen/_14ssp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:text="Copy To Keyboard"
+                app:cornerRadius="@dimen/_20sdp"
+                android:elevation="@dimen/_8sdp"
+                android:shadowRadius="@integer/material_motion_duration_medium_1"
+                android:background="@drawable/coby_btn_bg"
+                android:id="@+id/jokeItem_btn_coby"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                />
+        </LinearLayout>
+</androidx.cardview.widget.CardView>
